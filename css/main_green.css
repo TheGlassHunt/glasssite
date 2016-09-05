@@ -1,0 +1,705 @@
+/*
+	@Author: Vitaliy Grinevich (vivalaz)
+	@URL: 
+
+	This file contains the styling for the actual theme, 
+	this is the file you need to edit to change the 
+	look of the theme.
+
+	This file contents are outlined below:
+
+	1. Default Styles
+	2. Preloader
+	3. Fixed navigation
+	4. Header
+	5. Section preview app
+	6. Overview section
+	7. Compatibility section
+	8. Newsletter section
+	9. Testimonials section
+	10. Downloads counter
+	11. FAQ section
+	12. Contact form
+	13. Footer
+*/
+
+/*Lato - main text*/
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+/*Nunito - logo text*/
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+
+/*Default Styles*/
+*::-webkit-input-placeholder {
+	color: #A1A1A1;
+}
+*:-moz-placeholder {
+	color: #A1A1A1;
+}
+*:-ms-input-placeholder {
+	color: #A1A1A1;
+}
+::selection {
+	background-color: #6fc754;
+	color: #fff;
+}
+::-webkit-selection {
+	background-color: #6fc754;
+	color: #fff;
+}
+::-moz-selection {
+	background-color: #6fc754;
+	color: #fff;
+}
+body {
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	overflow-x: hidden;
+	color: #273140;
+}
+.hidden {
+	display: none;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+a {
+	-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+a:hover,
+a:focus,
+a:visited,
+a:focus,
+a:link {
+	outline: none;
+	text-decoration: none;
+	color: #fff;
+}
+ul {
+	list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6, ul {
+	margin: 0;
+	padding: 0;
+}
+.caps {
+	text-transform: uppercase;
+}
+.grey-bg {
+	background-color: #fbfbfc;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+section {
+	position: relative;
+	padding: 70px 30px;
+	overflow: hidden;
+}
+section:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../css/images/pattern.png);
+	background-repeat: repeat;
+}
+form {
+	display: block;
+	margin: 10px 0;
+}
+form input {
+	width: 100%;
+	padding: 5px 10px;
+	outline: none;
+	border-left: 1px solid #6fc754;
+	border-right: 1px solid #6fc754;
+	border-top: 1px solid #6fc754;
+	border-bottom: 3px solid #6fc754;
+	border-radius: 5px 5px;
+	color: #555;
+	font-weight: 400;
+}
+form textarea {
+	width: 280px;
+	height: 100px;
+	padding: 5px 10px;
+	outline: none;
+	border-left: 1px solid #6fc754;
+	border-right: 1px solid #6fc754;
+	border-top: 1px solid #6fc754;
+	border-bottom: 3px solid #6fc754;
+	border-radius: 5px;
+	color: #555;
+	font-weight: 400;
+}
+form input:focus,
+form textarea:focus {
+	border-left: 1px solid #6fc754;
+	border-right: 1px solid #6fc754;
+	border-top: 1px solid #6fc754;
+	border-bottom: 3px solid #6fc754;
+}
+.btn {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	text-align: center;
+	font-size: 1em;
+	text-decoration: none;
+	background: #64B44B;
+	border-bottom: 3px solid #599D43;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 700;
+	margin: 10px 10px;
+}
+.btn:hover {
+	color: #fff;
+	background-color: #6fc754;
+}
+.btn:before,
+.btn-download:after,
+.btn-purchase:after,
+.to-top:before {
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.btn-small {
+	padding: 3px 13px;
+}
+.btn-medium {
+	padding: 6px 20px;
+}
+.btn-large {
+	padding: 8px 35px;
+}
+.btn-iphone:before {
+	padding-right: 6px;
+	content: "\f179";
+}
+.btn-android:before {
+	padding-right: 6px;
+	content: "\f17b";
+}
+.btn-windows:before {
+	padding-right: 6px;
+	content: "\f17a";
+}
+.btn-download:after {
+	padding-left: 5px;
+	margin-left: 5px;
+	content: "\f0ed";
+	color: #fff;
+	border-left: 1px solid #ececec;
+}
+.btn-purchase:after {
+	padding-left: 5px;
+	margin-left: 5px;
+	content: "\f155";
+	color: #fff;
+	border-left: 1px solid #ececec;
+}
+.subscribe-now {
+	width: auto;
+	margin: 10px auto;
+}
+.contact-button {
+	width: 100%;
+	margin: 0;
+	text-transform: uppercase;
+}
+.section-heading {
+	color: #555;
+}
+.section-heading h2 {
+	font-weight: 300;
+	font-size: 2.7em;
+	line-height: 1.2;
+}
+.section-heading p {
+	margin: 20px 0;
+	font-size: 1em;
+}
+/*Preloader*/
+html.js .loader {
+	background: none repeat scroll 0 0 #ffffff;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+html.js .loader_inner {
+	background-image: url("../css/images/preloader.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #fff;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+}
+/*Begin fixed navigation*/
+.main-navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	padding: 15px 0;
+	webkit-transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+  	transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+}
+.sticky {
+	background-color: #fff;
+	padding: 10px 0 0;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  	-ms-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  	-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+}
+.sticky:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../css/images/pattern.png);
+	background-repeat: repeat;
+}
+.toggle-btn-mnu {
+	display: inline-block;
+	font-size: 1.3em;
+	color: #273140;
+	cursor: pointer;
+}
+.logo {
+	margin-top: -15px;
+}
+.logo a {
+	font-weight: 700;
+	color: #273140;
+	font-size: 0.4em;
+	letter-spacing: 1px;
+	font-family: "Nunito", sans-serif;
+}
+.slogan {
+	margin-top: 4px;
+}
+#slide_out_menu {
+	overflow: auto;
+	position: fixed;
+	display: block;
+	width: 380px;
+	max-width: 650px;
+	height: 100%;
+	left: -380px;
+	top: 0;
+	padding: 20px 40px 40px 40px;
+	z-index: 10;
+	background-color: #273140;
+	transition: left 0.7s cubic-bezier(0.545, 0, 0.05, 1);
+}
+.menu-close {
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+}
+.slide-logo a {
+	font-weight: 700;
+	font-family: "Nunito", sans-serif;
+	color: #fff;
+	font-size: 0.9em;
+	letter-spacing: 2px;
+}
+.slide-logo a:hover {
+	color: #6fc754;
+}
+.main-mnu {
+	margin-top: 10px;
+}
+.main-mnu ul li a {
+	display: block;
+	padding: 8px 0;
+	border-bottom: 1px solid #3a4759;
+	color: #fafafa;
+}
+.main-mnu ul li a:hover {
+	color: #6fc754;
+}
+.main-mnu ul li a i {
+	display: inline-block;
+	position: relative;
+	top: 1px;
+	left: 7px;
+}
+.main-mnu ul li ul {
+	display: none;
+}
+.main-mnu ul li ul li a {
+	font-size: 0.9em;
+	padding-left: 20px;
+}
+.socials {
+ 	margin: 5px 0 20px 0;
+ 	padding-bottom: 10px;
+ 	border-bottom: 1px solid #3a4759;
+}
+.socials li {
+  	display: inline-block;
+  	margin: 0 20px 0 0;
+}
+.socials li a {
+  	color: #fff;
+  	transition: all .2s ease-in-out;
+}
+.logo a:hover,
+.toggle-btn-mnu:hover,
+.menu-close:hover,
+.socials li a:hover,
+.advantage:hover i,
+#compatibility ul li {
+	color: #6fc754;
+}
+.socials li:last-child {
+  	margin-right: 0;
+}
+#main-nav #slide_out_menu.open {
+  	left: 0;
+}
+/*End fixed navigation*/
+
+/*Begin Header*/
+#header {
+	background-image: url(../images/coder.jpg);
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	padding: 200px 0 350px;
+}
+#header h2 {
+	font-size: 2.6em;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	font-family: "Nunito", sans-serif;
+}
+/*End Header*/
+
+/*Begin section preview app*/
+.iphone-wrapper {
+	background-image: url(../css/images/iphone-sm.png);
+	width: 291px;
+	height: 613px;
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	margin-left: -150px;
+}
+.iphone-wrapper img {
+	max-width: 253px;
+	height: 436px;
+	margin-top: 87px;
+	margin-left: 4px;
+	border-radius: 2px 2px;
+}
+/*End section preview app*/
+
+/*Begin overview section*/
+.advantage {
+	margin: 30px 0;
+}
+.advantage i {
+	font-size: 3em;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+.advantage h3 {
+	margin: 20px 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+#scroll-down {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	-webkit-animation: fading 1s infinite ease;
+}
+#scroll-down:before {
+	content: "\f103";
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 2.5em;
+	color: #fff;
+	cursor: pointer;
+}
+@-webkit-keyframes fading {
+	0% {
+		bottom: 50px;
+	}
+	50% {
+		bottom: 60px;
+		opacity: .75;
+	}
+	100% {
+		bottom: 50px;
+	}
+}
+/*End overview section*/
+
+/*Begin compatibility section*/
+#compatibility {
+	padding-bottom: 100px;
+}
+#compatibility .iphone-wrapper img {
+	margin-left: 24px;
+}
+#compatibility h2 {
+	margin-top: 70px;
+}
+#compatibility ul li {
+	display: inline-block;
+	padding: 0 15px;
+	font-size: 1.8em;
+}
+#compatibility ul li:first-child {
+	padding-left: 0;
+}
+#compatibility ul li:before {
+	content: "";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+#compatibility ul li:nth-child(1):before {
+	content: "\f179";
+}
+#compatibility ul li:nth-child(2):before {
+	content: "\f17b";
+}
+#compatibility ul li:nth-child(3):before {
+	content: "\f17a";
+}
+/*End compatibility section*/
+
+/*Begin newsletter section*/
+#newsletter form {
+	margin-top: 30px;
+}
+#newsletter form input {
+	max-width: 280px;
+}
+/*End newsletter section*/
+/*Begin testimonials section*/
+.layer {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0), 
+	0 8px 0 -5px #FCFCFC, 
+	0 8px 1px -4px rgba(0, 0, 0, 0.15), 
+	0 17px 0 -10px #FCFCFC, 
+	0 17px 1px -9px rgba(0, 0, 0, 0.15);
+}
+.testimonials-wrapper {
+	position: relative;
+	margin: 20px 0;
+	border: 1px solid #ececec;
+	border-radius: 5px 5px;
+	padding: 15px 30px;
+}
+.testimonials-user-info {
+	width: 200px;
+	text-align: center;
+	float: left;
+}
+.testimonials-user-info img {
+	border-radius: 50%;
+	border: 3px solid #ececec;
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+.testimonials-user-info h3 {
+	padding: 10px 0 0;
+}
+.testimonials-user-info span {
+	display: block;
+	font-size: 0.9em;
+}
+.owl-nav {
+  	font-size: 4em;
+}
+.owl-prev {
+	position: absolute;
+  	left: -70px;
+  	top: 30px; 
+  	opacity: .75;
+}
+.owl-next {
+	position: absolute;
+  	right: -70px;
+  	top: 30px;
+  	opacity: .75;
+}
+.owl-prev:hover,
+.owl-next:hover {
+	opacity: 1;
+}
+.owl-theme .owl-controls .owl-page span {
+	background: #6fc754;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+	background: #6fc754;
+}
+/*End testimonials section*/
+
+/*Begin downloads counter*/
+#get-app {
+	padding-bottom: 100px;
+}
+#get-app .section-heading p {
+	margin-bottom: 0;
+}
+#get-app .iphone-wrapper img {
+	margin-left: 24px;
+}
+#get-app .counter {
+	display: block;
+	padding: 15px 0;
+	color: #555;
+	font-size: 2.5em;
+	font-weight: 700;
+}
+#get-app .app-download {
+	margin: 0 0 10px;
+	font-size: 0.8em;
+	color: #f43c43;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+/*End downloads counter*/
+
+/*Begin FAQ section*/
+#app-faq .section-heading p {
+	margin: 20px 0;
+}
+#app-faq h4 {
+	font-size: 1.1em;
+}
+#app-faq p {
+	font-size: 1em;
+	margin: 0 0 20px;
+}
+/*End FAQ section*/
+
+/*Begin contact form*/
+#contact {
+	background-image: url(../css/images/word_map.png);
+	background-size: cover;
+	background-position: center;
+}
+fieldset {
+	border: none;
+}
+#contact form {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 30px;
+	border: 1px dashed #ececec;
+}
+.contact-form p {
+	margin-bottom: 10px;
+}
+.contact-form form input {
+	width: 100%;
+}
+.contact-form label {
+	display: block;
+	margin-bottom: 10px;
+}
+.contact-form textarea {
+	width: 100%;
+	resize: vertical;
+}
+/*End contact form*/
+
+/*Begin footer*/
+footer {
+	position: relative;
+	padding: 30px 0;
+}
+.to-top {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	font-size: 1.6em;
+	color: #64B44B;
+	border: 1px solid #64B44B;
+	border-radius: 10px 10px;
+	line-height: 35px;
+	cursor: pointer;
+}
+.to-top:before {
+    content: "\f106";
+}
+.to-top:hover {
+	background-color: #64B44B;
+	color: #fff;
+}
+footer .socials {
+ 	margin: 20px 0 0;
+ 	padding-bottom: 0;
+ 	border-bottom: none;
+}
+footer .socials li {
+  	display: inline-block;
+  	margin: 0 20px 0 0;
+}
+footer .socials li a {
+  	color: #64B44B;
+  	transition: all .2s ease-in-out;
+}
+.copyright {
+	font-size: 0.9em;
+	font-weight: 300;
+	color: #555;
+}
+/*End footer*/

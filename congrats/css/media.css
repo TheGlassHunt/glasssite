@@ -1,0 +1,150 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.logo,
+	#compatibility ul {
+		text-align: center;
+	}
+	#main-nav #slide_out_menu {
+	    width: 300px;
+	    height: 100%;
+	    left: -300px;
+	}
+	#preview-app,
+	#compatibility,
+	#get-app {
+		padding-bottom: 400px;
+	}
+	.iphone-wrapper {
+		top: 20px;
+		left: 50%;
+		margin-left: -150px;
+	}
+	#compatibility h2 {
+		margin-top: 0;
+	}
+	.testimonials-text {
+		padding-right: 20px;
+	}
+	.owl-prev {
+	  	left: 10px;
+	  	top: 10px; 
+	}
+	.owl-next {
+	  	right: 10px;
+	  	top: 10px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.logo {
+		text-align: right;
+	}
+	.testimonials-user-info {
+		width: auto;
+		float: inherit;
+		margin-right: 0;
+	}
+	.testimonials-text {
+		padding-right: 0;
+	}
+	.owl-nav {
+	  	font-size: 3em;
+	  	color: #555;
+	}
+	.owl-prev {
+		position: absolute;
+	  	left: 10px;
+	  	top: 20px; 
+	}
+	.owl-next {
+		position: absolute;
+	  	right: 10px;
+	  	top: 20px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.section-heading h2 {
+		font-size: 2em;
+	}
+	#header h2 {
+		font-size: 2.2em;
+	}
+	section {
+		padding: 40px 30px;
+	}
+	#get-app .counter {
+		font-size: 2em;
+	}
+	#contact form {
+		padding: 10px 5px;
+	}
+}
+
+@media only screen and (max-width : 400px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
